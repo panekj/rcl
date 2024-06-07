@@ -1,10 +1,38 @@
-# Projects files that `tree-sitter generate` generates, but I really don't care
-# about, because I want to minimize the amount of javascript that executes
-# outside of a browser please. We do need package.json for the file type
-# metadata and for `tree-sitter highlight` to work.
-/binding.gyp
-/bindings/node/
+# Rust artifacts
+Cargo.lock
+target/
 
-# Generated files that are intermediate build artifacts, and not needed to use
-# the grammar.
-/src/
+# Node artifacts
+build/
+prebuilds/
+node_modules/
+*.tgz
+
+# Swift artifacts
+.build/
+
+# Go artifacts
+go.sum
+_obj/
+
+# Python artifacts
+.venv/
+dist/
+*.egg-info
+*.whl
+
+# C artifacts
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.pc
+
+# Example dirs
+/examples/*/
+
+# Grammar volatiles
+*.wasm
+*.obj
+*.o
